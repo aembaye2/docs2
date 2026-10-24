@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Chapter 13: The Costs of Production – Econ 30303 StudyGuide</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Appendix01.html" rel="next">
+<link href="./Ch08.html" rel="prev">
+<link href="./https://datavizcatalogue.com/methods/images/top_images/SVG/density_plot.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f07248834697d125d844cdaf4174b45d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a64f2b92d8b4b45ab5f5d9261e8b8c9d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f07248834697d125d844cdaf4174b45d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+<!-- Loaded on every page of the book by _quarto.yml (format > html > include-in-header).
+     Mounts every <div class="exercise-system-root" data-quiz="quizN.js"> on the page,
+     so a chapter only needs the div. The stylesheet comes from `css:` in _quarto.yml.
+     The library is imported only when the page has a quiz. Quiz definitions and their
+     question modules live under assessments/. Paths are relative to the rendered page,
+     so keep chapters in the book's top folder (or adjust them). -->
+<script type="module">
+  const roots = document.querySelectorAll("[data-quiz]:not([data-mounted])");
+  if (roots.length > 0) {
+    const { mount } = await import("./assets/exercise-system/exercise-system.js");
+    for (const el of roots) {
+      el.dataset.mounted = "";
+      try {
+        const { assessment, questions } = await import(`./assessments/${el.dataset.quiz}`);
+        mount(el, { assessment, questions });
+      } catch (err) {
+        el.textContent = `Could not load the practice questions (${el.dataset.quiz}): ${err.message}`;
+        console.error(err);
+      }
+    }
+  }
+</script>
+<style>
+div.callout-definition.callout {
+  border-left-color: #C1AA98;
+}
+div.callout-definition.callout-style-default > .callout-header {
+  background-color: rgba(193, 170, 152, 0.13);
+}
+div.callout-definition .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-definition.callout-style-default .callout-icon::before, div.callout-definition.callout-titled .callout-icon::before {
+  content: '📜';
+  background-image: none;
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="assets/exercise-system/exercise-system.css">
+<meta name="twitter:title" content="2&nbsp; Chapter 13: The Costs of Production – Econ 30303 StudyGuide">
+<meta name="twitter:description" content="Intermediate Micro Study Notes and Practice">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="https://datavizcatalogue.com/methods/images/top_images/SVG/density_plot.svg" alt="" class="navbar-logo light-content">
+    <img src="https://datavizcatalogue.com/methods/images/top_images/SVG/density_plot.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Econ 30303 StudyGuide</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-wide tools-end">
+    <a href="./Econ-30303-StudyGuide.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ch09.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 13: The Costs of Production</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter 8: Production</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch09.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 13: The Costs of Production</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Appendix01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix01.html</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#economic-vs.-accounting-costs" id="toc-economic-vs.-accounting-costs" class="nav-link active" data-scroll-target="#economic-vs.-accounting-costs"><span class="header-section-number">2.1</span> 1. Economic vs.&nbsp;Accounting Costs</a></li>
+  <li><a href="#production-function-and-short-run-costs" id="toc-production-function-and-short-run-costs" class="nav-link" data-scroll-target="#production-function-and-short-run-costs"><span class="header-section-number">2.2</span> 2. Production Function and Short-Run Costs</a></li>
+  <li><a href="#key-relationships-between-the-curves" id="toc-key-relationships-between-the-curves" class="nav-link" data-scroll-target="#key-relationships-between-the-curves"><span class="header-section-number">2.3</span> 3. Key Relationships Between the Curves</a></li>
+  <li><a href="#long-run-costs" id="toc-long-run-costs" class="nav-link" data-scroll-target="#long-run-costs"><span class="header-section-number">2.4</span> 4. Long-Run Costs</a></li>
+  <li><a href="#common-mistakes-to-avoid" id="toc-common-mistakes-to-avoid" class="nav-link" data-scroll-target="#common-mistakes-to-avoid"><span class="header-section-number">2.5</span> 5. Common Mistakes to Avoid</a></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions"><span class="header-section-number">2.6</span> Practice Questions</a>
+  <ul class="collapse">
+  <li><a href="#part-a-multiple-choice" id="toc-part-a-multiple-choice" class="nav-link" data-scroll-target="#part-a-multiple-choice"><span class="header-section-number">2.6.1</span> Part A: Multiple Choice</a></li>
+  <li><a href="#part-b-calculation-questions" id="toc-part-b-calculation-questions" class="nav-link" data-scroll-target="#part-b-calculation-questions"><span class="header-section-number">2.6.2</span> Part B: Calculation Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 13: The Costs of Production</span></h1>
+<p class="subtitle lead">Intermediate Micro Study Notes and Practice</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="economic-vs.-accounting-costs" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="economic-vs.-accounting-costs"><span class="header-section-number">2.1</span> 1. Economic vs.&nbsp;Accounting Costs</h2>
+<ul>
+<li><strong>Explicit costs</strong> are payments made to outsiders: wages, rent, materials, interest on borrowed funds.</li>
+<li><strong>Implicit costs</strong> are the value of resources the owner already controls and does not pay for directly, such as the owner’s forgone salary, or interest the owner could have earned on savings used in the business.</li>
+</ul>
+<p>Economic cost, accounting profit, and economic profit are related as follows:</p>
+<p><span class="math display">\[
+\text{Economic cost} = \text{Explicit costs} + \text{Implicit costs}
+\]</span></p>
+<p><span class="math display">\[
+\pi_{\text{accounting}} = TR - \text{Explicit costs}
+\]</span></p>
+<p><span class="math display">\[
+\pi_{\text{economic}} = TR - (\text{Explicit costs} + \text{Implicit costs}) = \pi_{\text{accounting}} - \text{Implicit costs}
+\]</span></p>
+<ul>
+<li>An economic profit of zero is not a failure. It means the owner earns exactly what the resources could earn in their next-best use (a normal return).</li>
+<li><strong>Sunk costs</strong> are costs already committed that cannot be recovered. They should not affect forward-looking decisions.</li>
+</ul>
+</section>
+<section id="production-function-and-short-run-costs" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="production-function-and-short-run-costs"><span class="header-section-number">2.2</span> 2. Production Function and Short-Run Costs</h2>
+<ul>
+<li>A <strong>production function</strong> links inputs to output, for example <span class="math inline">\(Q = f(L, K)\)</span>.</li>
+<li>In the <strong>short run</strong>, at least one input is fixed (for example, the factory). In the <strong>long run</strong>, every input can be changed.</li>
+<li><strong>Marginal product of labor:</strong> <span class="math inline">\(MP_L = \dfrac{\Delta Q}{\Delta L}\)</span></li>
+<li><strong>Diminishing marginal product:</strong> after some point, each added worker adds less output than the one before, given fixed capital.</li>
+</ul>
+<p>Cost definitions, with <span class="math inline">\(FC\)</span> = fixed cost and <span class="math inline">\(VC\)</span> = variable cost:</p>
+<p><span class="math display">\[
+TC = FC + VC
+\]</span></p>
+<p><span class="math display">\[
+AFC = \frac{FC}{Q}, \qquad AVC = \frac{VC}{Q}, \qquad ATC = \frac{TC}{Q} = AFC + AVC
+\]</span></p>
+<p><span class="math display">\[
+MC = \frac{\Delta TC}{\Delta Q} = \frac{\Delta VC}{\Delta Q}
+\]</span></p>
+<ul>
+<li><p><strong>Link between MC and MP:</strong> if labor is the only variable input and the wage is <span class="math inline">\(w\)</span>, then</p>
+<p><span class="math display">\[
+MC = \frac{w}{MP_L}
+\]</span></p>
+<p>When <span class="math inline">\(MP_L\)</span> rises, <span class="math inline">\(MC\)</span> falls. When <span class="math inline">\(MP_L\)</span> falls, <span class="math inline">\(MC\)</span> rises. This is why the marginal cost curve rises in the short run: it reflects diminishing marginal product, with input prices held constant.</p></li>
+<li><p><span class="math inline">\(AFC\)</span> always falls as output rises, because fixed cost is spread over more units.</p></li>
+<li><p><span class="math inline">\(AVC\)</span>, <span class="math inline">\(ATC\)</span>, and <span class="math inline">\(MC\)</span> are typically U-shaped.</p></li>
+</ul>
+</section>
+<section id="key-relationships-between-the-curves" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="key-relationships-between-the-curves"><span class="header-section-number">2.3</span> 3. Key Relationships Between the Curves</h2>
+<ul>
+<li>If <span class="math inline">\(MC &lt; ATC\)</span>, ATC is falling. If <span class="math inline">\(MC &gt; ATC\)</span>, ATC is rising.</li>
+<li>Therefore, <strong>MC crosses ATC at the minimum of ATC</strong>.</li>
+<li>Similarly, <strong>MC crosses AVC at the minimum of AVC</strong>.</li>
+<li>The minimum of ATC occurs at a higher output than the minimum of AVC, because ATC also includes <span class="math inline">\(AFC\)</span>, which is still falling at that point.</li>
+<li>A change in fixed cost shifts <span class="math inline">\(AFC\)</span> and <span class="math inline">\(ATC\)</span>, but does <strong>not</strong> change <span class="math inline">\(MC\)</span> or <span class="math inline">\(AVC\)</span>.</li>
+</ul>
+</section>
+<section id="long-run-costs" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="long-run-costs"><span class="header-section-number">2.4</span> 4. Long-Run Costs</h2>
+<ul>
+<li>In the long run, all inputs are variable, so the firm can choose its best plant size.</li>
+<li>The <strong>long-run average total cost (LRATC)</strong> curve is the envelope of the short-run ATC curves: it touches each SRATC curve at one point.</li>
+<li><strong>Economies of scale:</strong> LRATC falls as output rises (specialization, division of labor, cheaper bulk inputs).</li>
+<li><strong>Constant returns to scale:</strong> LRATC is flat.</li>
+<li><strong>Diseconomies of scale:</strong> LRATC rises as output rises (coordination problems, management layers, bureaucracy).</li>
+<li><strong>Minimum efficient scale (MES):</strong> the smallest output at which LRATC reaches its minimum.</li>
+</ul>
+</section>
+<section id="common-mistakes-to-avoid" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="common-mistakes-to-avoid"><span class="header-section-number">2.5</span> 5. Common Mistakes to Avoid</h2>
+<ul>
+<li>Treating accounting profit as economic profit. Always subtract the implicit cost of the owner’s time and money.</li>
+<li>Including sunk costs in a decision about the future.</li>
+<li>Saying MC rises “because costs rise.” MC rises because marginal product falls (with input prices held constant).</li>
+<li>Reading the ATC minimum from the MC curve without checking that MC crosses ATC there.</li>
+<li>Thinking that a fixed-cost increase raises MC. It does not.</li>
+</ul>
+<hr>
+</section>
+<section id="practice-questions" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="practice-questions"><span class="header-section-number">2.6</span> Practice Questions</h2>
+<section id="part-a-multiple-choice" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="part-a-multiple-choice"><span class="header-section-number">2.6.1</span> Part A: Multiple Choice</h3>
+<p><strong>Question 1.</strong> A bakery’s weekly short-run data are shown below.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Output (loaves)</th>
+<th>0</th>
+<th>10</th>
+<th>20</th>
+<th>30</th>
+<th>40</th>
+<th>50</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total cost ($)</td>
+<td>600</td>
+<td>900</td>
+<td>1,100</td>
+<td>1,350</td>
+<td>1,650</td>
+<td>2,150</td>
+</tr>
+</tbody>
+</table>
+<p>Which statement is correct?</p>
+<ul>
+<li>A. ATC is lowest at 20 loaves, because MC is lowest over the interval from 10 to 20.</li>
+<li>B. ATC is lowest at 40 loaves (about $41.25 per loaf), and ATC rises to $43 at 50 loaves.</li>
+<li>C. ATC is lowest at 30 loaves, because MC equals ATC at that output.</li>
+<li>D. Fixed cost is $1,100 per week.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>ATC at each output: 10 loaves → 90, 20 → 55, 30 → 45, 40 → 41.25, 50 → 43. ATC is lowest at 40 loaves. MC over each interval is 30, 20, 25, 30, 50. MC is lowest between 10 and 20, but that does not determine the ATC minimum. Fixed cost is $600 (the TC at zero output), so D is wrong.</p>
+</details>
+<p><strong>Question 2.</strong> A small business owner’s accounting profit for the year is $80,000. She could have earned $50,000 working for an employer, and the $400,000 she has invested in the business could have earned $30,000 in interest elsewhere. Which statement is correct?</p>
+<ul>
+<li>A. Her economic profit is $80,000, because the business is profitable by accounting standards.</li>
+<li>B. Her economic profit is zero, because implicit costs total $80,000.</li>
+<li>C. Her economic profit is −$30,000, because the implicit costs total $110,000.</li>
+<li>D. Her economic profit is $30,000, because only the interest on capital is an implicit cost.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>Implicit costs = forgone salary ($50,000) + forgone interest ($30,000) = $80,000. Economic profit = accounting profit − implicit costs = $80,000 − $80,000 = 0. The owner earns a normal return: the business is just as good as her next-best use of her time and money.</p>
+</details>
+<p><strong>Question 3.</strong> A firm hires workers at a fixed wage. The marginal product of labor rises from the first worker to the third worker and then falls for each additional worker. Which statement is correct?</p>
+<ul>
+<li>A. Marginal cost falls as long as marginal product rises, then rises once marginal product begins to fall.</li>
+<li>B. Marginal cost rises from the first worker onward, because the wage is constant.</li>
+<li>C. Marginal cost is constant, because the wage is constant.</li>
+<li>D. Marginal cost falls indefinitely, because more workers always lower the cost per unit.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: A.</strong></p>
+<p>Because <span class="math inline">\(MC = w / MP_L\)</span> with a fixed wage, MC moves opposite to MP. MC falls while MP rises and rises once MP falls. The wage does not change, so it cannot explain the rise in MC.</p>
+</details>
+<p><strong>Question 4.</strong> A firm’s long-run average total cost falls from an output of 100 units to 300 units, stays flat from 300 to 500 units, and rises beyond 500 units. Which statement is correct?</p>
+<ul>
+<li>A. Diseconomies of scale begin at 300 units.</li>
+<li>B. The minimum efficient scale is 300 units.</li>
+<li>C. There are constant returns to scale below 300 units.</li>
+<li>D. The minimum efficient scale is 500 units, where the curve starts to rise.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>Economies of scale operate from 100 to 300 units. Between 300 and 500 units LRATC is flat (constant returns to scale). Diseconomies begin above 500 units. The minimum efficient scale is the smallest output that reaches the minimum LRATC, which is 300 units.</p>
+</details>
+<p><strong>Question 5.</strong> A firm in a competitive market has a minimum AVC of $14 (at 8 units) and a minimum ATC of $20 (at 12 units). The market price is $12. In the short run, which is correct?</p>
+<ul>
+<li>A. The firm should keep producing at 12 units, because price is below minimum ATC but the firm can still cover fixed costs.</li>
+<li>B. The firm should shut down, because price is below minimum AVC, so it cannot cover variable costs.</li>
+<li>C. The firm should produce 8 units, because that is where AVC is at its minimum.</li>
+<li>D. The firm should expand output to reach the lowest ATC at 12 units.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>In the short run, a firm should keep operating only if price covers AVC at its chosen output. With price of $12 below the lowest AVC of $14, no output level covers variable costs, so the firm shuts down and loses only its fixed cost. The ATC comparison is not the short-run shutdown test; A and D reflect that mistake.</p>
+</details>
+<p><strong>Question 6.</strong> At an output of 150 units, a firm’s ATC is $24 and ATC is falling as output rises. Which must be true at 150 units?</p>
+<ul>
+<li>A. MC is greater than $24.</li>
+<li>B. MC is less than $24.</li>
+<li>C. MC equals $24.</li>
+<li>D. AFC is rising.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>ATC falls only when MC is below ATC (the new unit pulls the average down). So MC &lt; $24 at 150 units. AFC always falls as output rises, so D is wrong.</p>
+</details>
+<p><strong>Question 7.</strong> A firm spent $2 million last year on specialized equipment that has no resale value. It is now deciding whether to keep operating. Which is correct?</p>
+<ul>
+<li>A. The $2 million should be included in the decision, because it is a cost the firm has already incurred.</li>
+<li>B. The $2 million should be excluded, because it is a sunk cost; only future revenues and avoidable costs should be compared.</li>
+<li>C. The $2 million should be divided over future output to find a higher ATC that justifies shutting down.</li>
+<li>D. The $2 million should be counted as an implicit cost that reduces the firm’s accounting profit.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>Sunk costs cannot be recovered whether the firm continues or stops, so they should not affect the forward-looking decision. Option D is wrong because the cost is explicit (it was paid), and it is already a past cost, not a forgone opportunity.</p>
+</details>
+<p><strong>Question 8.</strong> A firm’s monthly rent rises by $200, with no change in output or variable inputs. Which is correct?</p>
+<ul>
+<li>A. MC rises by $200 / Q, and AVC rises.</li>
+<li>B. AFC and ATC both rise, while MC and AVC are unchanged.</li>
+<li>C. MC and ATC both rise, while AFC falls.</li>
+<li>D. Only AVC rises, because rent is a variable cost.</li>
+</ul>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>Answer: B.</strong></p>
+<p>Rent is a fixed cost. A higher FC raises AFC (by $200 divided by Q) and therefore ATC, but it does not change VC, AVC, or MC.</p>
+</details>
+</section>
+<section id="part-b-calculation-questions" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="part-b-calculation-questions"><span class="header-section-number">2.6.2</span> Part B: Calculation Questions</h3>
+<p><strong>Question 9.</strong> A firm has fixed cost of $50. Its total cost at outputs Q = 1 to 5 is given in the R table below. The table is generated from the total cost values, so you can check every entry yourself.</p>
+<div class="cell">
+<div id="tbl-q9" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-q9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1
+</figcaption>
+<div aria-describedby="tbl-q9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(Q\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(VC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(AFC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(AVC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(ATC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(MC\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">50.00</td>
+<td style="text-align: right;">30.0</td>
+<td style="text-align: right;">80.00</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">25.00</td>
+<td style="text-align: right;">25.0</td>
+<td style="text-align: right;">50.00</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">16.67</td>
+<td style="text-align: right;">25.0</td>
+<td style="text-align: right;">41.67</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">12.50</td>
+<td style="text-align: right;">27.5</td>
+<td style="text-align: right;">40.00</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">31.0</td>
+<td style="text-align: right;">41.00</td>
+<td style="text-align: right;">45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<ol type="a">
+<li>Using the table, find the output at which ATC is at its minimum, and its value.</li>
+<li>Verify that <span class="math inline">\(ATC = AFC + AVC\)</span> at <span class="math inline">\(Q = 3\)</span>.</li>
+</ol>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>(a)</strong> ATC is lowest at <span class="math inline">\(Q = 4\)</span>, where <span class="math inline">\(ATC = \$40.00\)</span>.</p>
+<p><strong>(b)</strong> At <span class="math inline">\(Q = 3\)</span>: <span class="math inline">\(AFC + AVC = 16.67 + 25.00 = 41.67 = ATC = 125 / 3 = 41.67\)</span>. ✓</p>
+</details>
+<p><strong>Question 10.</strong> A firm has fixed cost of $500 and hires labor at $100 per day. The R table below shows output for 0 to 5 workers and the resulting marginal product and marginal cost.</p>
+<div class="cell">
+<div id="tbl-q10" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-q10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2
+</figcaption>
+<div aria-describedby="tbl-q10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Workers (<span class="math inline">\(L\)</span>)</th>
+<th style="text-align: right;">Output (<span class="math inline">\(Q\)</span>)</th>
+<th style="text-align: right;"><span class="math inline">\(MP_L\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(MC\)</span> ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">6.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">25.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">50.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<ol type="a">
+<li>Using the table, describe how MC changes as MP changes.</li>
+<li>At 5 workers, compute AVC and ATC.</li>
+</ol>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>(a)</strong> MC = <span class="math inline">\(w / MP_L\)</span>. MC falls from worker 1 to worker 2 while MP rises, then rises from worker 3 onward once MP falls.</p>
+<p><strong>(b)</strong> At 5 workers: <span class="math inline">\(VC = 5 \times 100 = \$500\)</span> and <span class="math inline">\(TC = 500 + 500 = \$1{,}000\)</span>. <span class="math inline">\(AVC = 500 / 42 \approx \$11.90\)</span>. <span class="math inline">\(ATC = 1{,}000 / 42 \approx \$23.81\)</span>.</p>
+</details>
+<p><strong>Question 11.</strong> A firm has the cost function</p>
+<p><span class="math display">\[
+TC = 200 + 10Q + 0.5Q^2
+\]</span></p>
+<p>The R table below evaluates ATC and MC for outputs from 10 to 30 units.</p>
+<div class="cell">
+<div id="tbl-q11" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-q11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.3
+</figcaption>
+<div aria-describedby="tbl-q11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(Q\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(TC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(ATC\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(MC\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">350.0</td>
+<td style="text-align: right;">35.00</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">462.5</td>
+<td style="text-align: right;">30.83</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">600.0</td>
+<td style="text-align: right;">30.00</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">762.5</td>
+<td style="text-align: right;">30.50</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">950.0</td>
+<td style="text-align: right;">31.67</td>
+<td style="text-align: right;">40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<ol type="a">
+<li>Find expressions for <span class="math inline">\(FC\)</span>, <span class="math inline">\(VC\)</span>, <span class="math inline">\(AVC\)</span>, <span class="math inline">\(ATC\)</span>, and <span class="math inline">\(MC\)</span>.</li>
+<li>Compute <span class="math inline">\(TC\)</span>, <span class="math inline">\(AVC\)</span>, <span class="math inline">\(ATC\)</span>, and <span class="math inline">\(MC\)</span> at <span class="math inline">\(Q = 20\)</span>.</li>
+<li>Find the output that minimizes <span class="math inline">\(ATC\)</span>, and the minimum <span class="math inline">\(ATC\)</span> value.</li>
+</ol>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>(a)</strong></p>
+<p><span class="math display">\[
+FC = 200, \qquad VC = 10Q + 0.5Q^2
+\]</span></p>
+<p><span class="math display">\[
+AVC = 10 + 0.5Q, \qquad ATC = \frac{200}{Q} + 10 + 0.5Q, \qquad MC = \frac{dTC}{dQ} = 10 + Q
+\]</span></p>
+<p><strong>(b)</strong> At <span class="math inline">\(Q = 20\)</span>:</p>
+<ul>
+<li><span class="math inline">\(TC = 200 + 200 + 200 = \$600\)</span></li>
+<li><span class="math inline">\(AVC = 10 + 10 = \$20\)</span></li>
+<li><span class="math inline">\(ATC = 600 / 20 = \$30\)</span></li>
+<li><span class="math inline">\(MC = 10 + 20 = \$30\)</span></li>
+</ul>
+<p><strong>(c)</strong> Set the derivative of ATC to zero:</p>
+<p><span class="math display">\[
+-\frac{200}{Q^2} + 0.5 = 0 \quad\Rightarrow\quad Q^2 = 400 \quad\Rightarrow\quad Q = 20
+\]</span></p>
+<p>Minimum ATC <span class="math inline">\(= \frac{200}{20} + 10 + 10 = \$30\)</span>. This matches the point where <span class="math inline">\(MC = ATC\)</span>. In the table, ATC at <span class="math inline">\(Q = 20\)</span> is the lowest value.</p>
+</details>
+<p><strong>Question 12.</strong> A firm’s long-run average total cost is $50 at 100 units, $40 at 200 units, $40 at 400 units, and $52 at 800 units.</p>
+<ol type="a">
+<li>Over what output range does the firm experience economies of scale, constant returns, and diseconomies of scale?</li>
+<li>What is the minimum efficient scale?</li>
+</ol>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>(a)</strong> Economies of scale: 100 to 200 units (LRATC falls from $50 to $40). Constant returns: 200 to 400 units (LRATC flat at $40). Diseconomies of scale: beyond 400 units (LRATC rises to $52 at 800 units).</p>
+<p><strong>(b)</strong> The minimum efficient scale is 200 units, the smallest output at which LRATC reaches its minimum of $40.</p>
+</details>
+<p><strong>Question 13.</strong> A firm has the short-run total cost</p>
+<p><span class="math display">\[
+TC = 100 + 4Q + Q^2, \qquad MC = 4 + 2Q
+\]</span></p>
+<ol type="a">
+<li>If the market price is $20, how many units should the firm produce, and what is its profit?</li>
+<li>If the market price falls to $10, should the firm produce or shut down? Explain using the loss from each choice.</li>
+</ol>
+<details>
+<summary>
+<strong>Answer Key</strong>
+</summary>
+<p><strong>(a)</strong> Set <span class="math inline">\(P = MC\)</span>: <span class="math inline">\(20 = 4 + 2Q\)</span>, so <span class="math inline">\(Q = 8\)</span>.</p>
+<ul>
+<li><span class="math inline">\(TR = 20 \times 8 = \$160\)</span></li>
+<li><span class="math inline">\(TC = 100 + 32 + 64 = \$196\)</span></li>
+<li>Profit <span class="math inline">\(= 160 - 196 = \mathbf{-\$36}\)</span></li>
+</ul>
+<p>The firm operates because price ($20) covers AVC at <span class="math inline">\(Q = 8\)</span> (AVC <span class="math inline">\(= 4 + 8 = \$12\)</span>). Shutting down would lose the full $100 of fixed cost, so producing (loss of $36) is better.</p>
+<p><strong>(b)</strong> Set <span class="math inline">\(P = MC\)</span>: <span class="math inline">\(10 = 4 + 2Q\)</span>, so <span class="math inline">\(Q = 3\)</span>.</p>
+<ul>
+<li><span class="math inline">\(TR = 10 \times 3 = \$30\)</span></li>
+<li><span class="math inline">\(TC = 100 + 12 + 9 = \$121\)</span></li>
+<li>Profit <span class="math inline">\(= 30 - 121 = \mathbf{-\$91}\)</span></li>
+</ul>
+<p>Price ($10) is above AVC at <span class="math inline">\(Q = 3\)</span> (AVC <span class="math inline">\(= 4 + 3 = \$7\)</span>), so the firm still covers its variable cost and produces. Its loss of $91 is less than the $100 loss from shutting down, so the firm should keep producing in the short run.</p>
+</details>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
+            }
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Ch08.html" class="pagination-link" aria-label="Chapter 8: Production">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter 8: Production</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Appendix01.html" class="pagination-link" aria-label="Appendix01.html">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix01.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<!-- Current resource authored via <a href="https://quarto.org/docs/books/">Quarto</a>. -->
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
